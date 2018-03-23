@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  node-server:
+    image: node:9.5.0
+    working_dir: /src/app
+    command: npm start
+    volumes:
+     - .:/src/app
+     - /src/app/node_modules
+    ports:
+      - "80:8000"
+    links:
+      - pgdb
+    environment:
+      PGDATABASE: dummy
+      PGUSER: burhan
+      PGPASSWORD: helloworld
+      PGPORT: 5432
+      PGHOST: pgdb
+      secret: nowyouknow
+    stdin_open: true
+    tty: true
+
+
+  pgdb:
+    image: postgres
+    working_dir: /db
+    # command: "./setUp.sh"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./db:/db
+      - ./db/:/docker-entrypoint-initdb.d
+    ports :
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: burhan
+      POSTGRES_PASSWORD: helloworld

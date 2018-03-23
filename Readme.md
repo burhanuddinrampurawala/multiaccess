@@ -1,5 +1,6 @@
 # Multi level access webpage 
 ## features:
+- single page application
 - frontend build on **reactjs**
 - backend build on **nodejs**
 - uses **mobx** for state management

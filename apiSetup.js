@@ -40,7 +40,9 @@ module.exports = function(express,bodyParser,helmet,morgan,jwt){
             'Access-Control-Allow-Headers':'*'
         })
         const header = req.headers.poweredup;
-        if(!header)
+        if(/image/i.test(req.headers.accept))
+            next();
+        else if(!header)
             return res.status(400).send({ 
                 success: false, 
                 message: 'Invalid request' 

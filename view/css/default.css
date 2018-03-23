@@ -1,3 +1,10 @@
+body{
+    background-image: url('../images/bg.jpg');
+    background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+}
 .newLine{
     display:grid;
     width:auto;
@@ -5,19 +12,56 @@
     margin-right: 20px
 }
 label{
-    margin-top:10px
+    margin-top:10px;
+    margin-right: 10px;
+    font-size:200%;
+    color: #FAF9F9
 }
 input{
-    margin-left:5px
+    margin-left:10px;
+    border-radius: 7px;
+    font-size:60%;
+    padding:5px
 }
 select{
-    margin-left:5px
+    margin-left:10px;
+    font-size:60%;
+    padding:5px;
+    background: #BB873B;
+    color:white
 }
 button{
     margin-top:10px;
     width:auto;
-    color:black
+    color:white;
+    font-size:150%;
+    padding:5px;
+    border: none;
+}
+button.delete{
+    background-color: #972C2C
+}
+button.login{
+    background-color: #75A7CB
+}
+button.logout{
+    background-color: #A03232
+}
+button.adduser{
+    background-color: #75A7CB
 }
 .sameLine{
     display:-webkit-box
+}
+h1{
+    color: #FAF9F9;
+    margin-left: 30px
+}
+form{
+    display:grid;
+    position: relative;
+    margin: 0 auto;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
 }

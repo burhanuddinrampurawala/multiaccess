@@ -22,11 +22,9 @@ class Dashboard extends React.Component{
     render(){
         return(
             <div>
-            <h1>Welcome  {this.props.user} to the Dashboard</h1> 
+            <h1>Welcome  {this.props.user} to the Dashboard</h1>
                 {this.check()}
-            <div className='newLine'>
-                <button onClick={this.logout.bind(this)}>Logout</button>
-            </div>
+            <button class='logout' onClick={this.logout.bind(this)}>Logout</button>
             </div>
         );
     }

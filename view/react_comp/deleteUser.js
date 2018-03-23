@@ -49,7 +49,7 @@ class deleteUser extends React.Component {
   }
   render() {
     return (
-      <div className="newLine">
+      <div class="newLine">
         <label>
           {" "}
           Delete User
@@ -63,7 +63,7 @@ class deleteUser extends React.Component {
           </select>
         </label>
         <label>{this.message}</label>
-        <button disabled={this.validate()} onClick={this.submit.bind(this)}>
+        <button class='delete' disabled={this.validate()} onClick={this.submit.bind(this)}>
           Delete {this.user}
         </button>
       </div>

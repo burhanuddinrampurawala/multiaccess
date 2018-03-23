@@ -75,7 +75,7 @@ class addUser extends React.Component {
             <option value="true">Owner</option>
           </select>
         </label>
-        <button onClick={this.submit.bind(this)}>
+        <button class='adduser' type='submit' onClick={this.submit.bind(this)}>
           AddUser {this.formData.user}
         </button>
         <label>{this.formData.message}</label>

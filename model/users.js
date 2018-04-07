@@ -12,6 +12,7 @@ const User = sequelize.define('user',{
 	password:{type: Sequelize.STRING},
 	owner:{type: Sequelize.BOOLEAN}
 });
+User.sync({force:false});
 const app = {};
 app.authenticate = async function (user,password,owner){
 	const data = await  User.findAll({

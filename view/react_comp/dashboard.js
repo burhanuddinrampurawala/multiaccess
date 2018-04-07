@@ -17,7 +17,7 @@ class Dashboard extends React.Component{
     }
     logout=event=>{
         event.preventDefault();
-        api.logout().then(location.reload(true))
+        api.logout().then(()=>location.reload(true))
     }
     render(){
         return(

@@ -27,6 +27,7 @@ module.exports = function(express, bodyParser, helmet, morgan, jwt) {
                     .json({ success: false, message: "Failed to authenticate token." });
                 } else {
                     req.decoded = decoded;
+		    console.log(`The request was made by ${decoded.data.user} who has ${decoded.data.owner} access`)
                     next();
                 }
             });

@@ -11,7 +11,7 @@
 - uses **docker** to create an environment
 - password is stored as an **hash**
 - based on **MVC** 
-- response send various  security headers
+- response sends various  security headers
 - request won't work until you send a particular header `poweredup:true` 
 
 ## Getting started:
